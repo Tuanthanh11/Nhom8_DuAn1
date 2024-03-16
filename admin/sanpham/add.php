@@ -8,12 +8,16 @@
                     <input type="text" name="tensp" id=""><br><br>
                     Gia <br>
                     <input type="text" name="gia" id=""><br><br>
+                    Size <br>
+                    <input type="text" name="size" id=""><br><br>
+                    So luong <br>
+                    <input type="text" name="soluong" id=""><br><br>
                     Danh muc <br>
                     <select name="iddm" id="">
                         <?php
                         foreach ($listdm as $dm) {
                             extract($dm);
-                            echo '<option value="'.$id.'">'.$name.'</option>';
+                            echo '<option value="'.$id.'">'.$tendm.'</option>';
                         }
                         ?>
                     </select>
