@@ -1,6 +1,12 @@
 <?php
 
-    include "view/header.php";  
+    include "view/header.php";
+    include "model/pdo.php";
+    include "model/danhmuc.php";
+    include "model/sanpham.php";  
+    include "linkimg.php";
+    
+    $spnew=loadall_sanpham_home();
 
     if((isset($_GET['act']))&&($_GET['act']!="")){  
         $act=$_GET['act'];

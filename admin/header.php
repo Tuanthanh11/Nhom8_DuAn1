@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="index.php">Trang chu</a></li>
                 <li><a href="index.php?act=listdm">Danh muc</a></li>
-                <li><a href="index.php?act=listsp">Hang hoa</a></li>
+                <li><a href="index.php?act=addsp">San pham</a></li>
                 <li><a href="index.php?act=dskh">Khach hang</a></li>
                 <li><a href="index.php?act=dsbl">Binh luan</a></li>
                 <li><a href="index.php?act=thongke">Thong ke</a></li>
