@@ -7,29 +7,34 @@
     include "linkimg.php";
     
     $spnew=loadall_sanpham_home();
+    $spvip=loadall_sanphamvip_home();
 
     if((isset($_GET['act']))&&($_GET['act']!="")){  
         $act=$_GET['act'];
         switch ($act) { 
-            case 'contact':
-                include "view/contact.php";
+            case 'lienhe':
+                include "view/lienhe.php";
                 break;
 
-            case 'shop':
-                include "view/shop.php";
+            case 'sanpham':
+                include "view/sanpham.php";
                 break;
 
 
-            case 'cart':
-                include "view/cart.php";
+            case 'giohang':
+                include "view/giohang.php";
                 break;
 
-            case 'detail':
-                include "view/detail.php";
+            case 'chitietsp':
+                include "view/chitietsp.php";
                 break;
 
-            case 'checkout':
-                include "view/checkout.php";
+            case 'dangnhap':
+                include "view/dangnhap.php";
+                break;
+
+            case 'dangky':
+                include "view/dangky.php";
                 break;
 
             

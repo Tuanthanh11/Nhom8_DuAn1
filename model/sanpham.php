@@ -39,6 +39,12 @@ function loadone_sanpham($id){
 }
 
 function loadall_sanpham_home(){
+    $sql="SELECT * FROM sanpham where 1 ORDER BY id DESC LIMIT 0,6";
+    $listsp=pdo_query($sql);
+    return $listsp;
+ }
+
+ function loadall_sanphamvip_home(){
     $sql="SELECT * FROM sanpham where 1 ORDER BY id DESC LIMIT 0,9";
     $listsp=pdo_query($sql);
     return $listsp;
