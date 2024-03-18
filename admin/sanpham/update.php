@@ -10,10 +10,10 @@ $hinhpath="../upload/".$hinhanh;
     }
 ?>
 
-<div class="row bm frmtitle">
+<div class="container-fluid pt-4 px-4 ">
             <h1>Cap nhat san pham</h1>
         </div>
-        <div class="row">
+        <div class="bg-light rounded p-4">
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
                 <div class="row frmcontent">
                     Danh muc: 
@@ -32,25 +32,25 @@ $hinhpath="../upload/".$hinhanh;
                     extract($sanpham);
                     ?>
                     Ten san pham <br>
-                    <input type="text" name="tensp" value="<?=$tensp?>"><br>
+                    <input class="form-control" type="text" name="tensp" value="<?=$tensp?>"><br>
                     Gia <br>
-                    <input type="text" name="gia" value="<?=$gia?>"><br>
+                    <input class="form-control" type="text" name="gia" value="<?=$gia?>"><br>
                     Size <br>
-                    <input type="text" name="size" value="<?=$size?>"><br>
+                    <input class="form-control"type="text" name="size" value="<?=$size?>"><br>
                     So luong <br>
-                    <input type="text" name="soluong" value="<?=$soluong?>"><br>
+                    <input class="form-control" type="text" name="soluong" value="<?=$soluong?>"><br>
                     Hinh <br>
-                    <?=$img?>
+                    <div width='120'><?=$img?> </div>
                     <input type="file" name="hinh" id=""><br>
                     Mo ta<br>
                     <textarea name="mota" id="" cols="30" rows="10"><?=$mota?></textarea>
                 </div>
                 
-                <div class="row frmcontent">
+                <div class="pt-4">
                     <input type="hidden" name="id" value="<?=$id?>">
-                    <button type="submit" name="capnhat" value="capnhat" >Cap nhat</button>
-                    <button type="reset">Nhap lai</button>
-                    <a href="index.php?act=listsp"><button type="button">Danh sach</button></a>
+                    <button class="btn btn-primary" type="submit" name="capnhat" value="capnhat" >Cap nhat</button>
+                    <button class="btn btn-primary" type="reset">Nhap lai</button>
+                    <a href="index.php?act=listsp"><button class="btn btn-primary" type="button">Danh sach</button></a>
                 </div>
                 <?php
                         if(isset($thongbao)&&($thongbao!="")){
@@ -59,4 +59,4 @@ $hinhpath="../upload/".$hinhanh;
                         ?>
             </form>
         </div>
-    </div>
+    

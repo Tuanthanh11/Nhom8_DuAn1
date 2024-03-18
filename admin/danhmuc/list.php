@@ -1,15 +1,15 @@
-<div class="row bm frmtitle">
+<div class="container-fluid pt-4 px-4 ">
             <h1>Danh sach loai hang</h1>
         </div>
-        <div class="row">
+        <div class="bg-light rounded p-4 ">
             <form action="" method="post">
-                <div class="row frmcontent">
-                   <table>
+                <div class="">
+                   <table class="table">
                     <tr>
                         <th></th>
                         <th>Ma loai</th>
                         <th>Ten loai</th>
-                        <th></th>
+                        <th>Chuc nang</th>
                     </tr>
                     <?php 
                         foreach($listdm as $dm){
@@ -21,8 +21,8 @@
                             <td><input type="checkbox" name="" id=""></td>
                             <td>'.$id.'</td>
                             <td>'.$tendm.'</td>
-                            <td> <a href="'.$suadm.'"><button type="button">Sua</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoadm.'"><button type="button">Xoa</button></a>
+                            <td> <a href="'.$suadm.'"><button class="btn btn-primary" type="button">Sua</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoadm.'"><button class="btn btn-primary" type="button">Xoa</button></a>
                              </td>
                             </tr>
                             ';
@@ -33,10 +33,11 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <button type="button">Chon tat ca</button>
-                    <button type="button">Xoa tat ca</button>
-                    <button type="button">Bo chon tat ca</button>
-                    <a href="index.php?act=adddm"><button type="button">Nhap them</button></a>
+                    <a href="index.php?act=adddm"><button class="btn btn-primary" type="button">Nhap them</button></a>
                 </div>
             </form>
         </div>
+        
+        
+
+   

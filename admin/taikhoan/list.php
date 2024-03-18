@@ -1,10 +1,10 @@
-<div class="row bm frmtitle">
+<div class="container-fluid pt-4 px-4 ">
             <h1>DANH SACH KHACH HANG</h1>
-        </div>
-        <div class="row">
+            </div>
+        <div class="bg-light rounded p-4 ">
             <form action="" method="post">
-                <div class="row frmcontent">
-                   <table>
+                <div class="">
+                   <table class="table">
                     <tr>
                         <th></th>
                         <th>Ma tk</th>
@@ -31,8 +31,8 @@
                             <td>'.$diachi.'</td>
                             <td>'.$sdt.'</td>
                             <td>'.$role.'</td>
-                            <td> <a href="'.$suatk.'"><button type="button">Sua</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoadtk.'"><button type="button">Xoa</button></a>
+                            <td> <a href="'.$suatk.'"><button class="btn btn-primary" type="button">Sua</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoadtk.'"><button class="btn btn-primary" type="button">Xoa</button></a>
                              </td>
                             </tr>
                             ';
@@ -43,10 +43,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <button type="button">Chon tat ca</button>
-                    <button type="button">Xoa tat ca</button>
-                    <button type="button">Bo chon tat ca</button>
-                    <a href="../index.php"><button type="button">Home</button></a>
+                    <a href="../index.php"><button class="btn btn-primary" type="button">Home</button></a>
                 </div>
             </form>
         </div>
