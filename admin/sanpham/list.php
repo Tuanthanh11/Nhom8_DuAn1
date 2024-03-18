@@ -1,24 +1,24 @@
-<div class="row bm frmtitle">
+<div class="container-fluid pt-4 px-4 ">
             <h1>Danh sach san pham</h1>
         </div>
-        <form action="#" method="post">
-            <input type="text" name="kyw" id="">
+        <form  action="#" method="post">
+            <input  type="text" name="kyw" id="">
             <select name="iddm" id="">
                 <option value="0" select>Tat ca</option>
                 <?php
                     foreach ($listdm as $dm) {
                         extract($dm);
-                        echo '<option value="'.$id.'">'.$name.'</option>';
+                        echo '<option value="'.$id.'">'.$tendm.'</option>';
                     }
                 ?>
             </select>
-            <input type="submit" name="listok" value="GO">
+            <input class="btn btn-primary" type="submit" name="listok" value="GO">
         </form>
         <br>
-        <div class="row">
+        <div class="bg-light rounded p-4">
             <form action="" method="post">
                 <div class="row frmcontent">
-                   <table>
+                   <table class="table">
                     <tr>
                         <th></th>
                         <th>Ma san pham</th>
@@ -29,7 +29,7 @@
                         <th>So luong</th>
                         <th>Luot xem</th>
                         <th>mota</th>
-                        <th></th>
+                        <th>Chuc nang</th>
                     </tr>
                     <?php 
                         foreach($listsp as $sp){
@@ -38,7 +38,7 @@
                             $xoasp="index.php?act=xoasp&id=".$id;
                             $hinhpath="../upload/".$hinhanh;
                             if(is_file($hinhpath)){
-                               $img ="<img src='".$hinhpath."' width='80'>" ;
+                               $img ="<img src='".$hinhpath."' width='100'>" ;
                             }else{
                                 $img = "no photo";
                             }
@@ -54,8 +54,8 @@
                             <td>'.$soluong.'</td>
                             <td>'.$luotxem.'</td>
                             <td>'.$mota.'</td>
-                            <td> <a href="'.$suasp.'"><button type="button">Sua</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button type="button">Xoa</button></a>
+                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sua</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xoa</button></a>
                              </td>
                             </tr>
                             ';
@@ -66,10 +66,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <button type="button">Chon tat ca</button>
-                    <button type="button">Xoa tat ca</button>
-                    <button type="button">Bo chon tat ca</button>
-                    <a href="index.php?act=addsp"><button type="button">Nhap them</button></a>
+                    <a href="index.php?act=addsp"><button class="btn btn-primary" type="button">Nhap them</button></a>
                 </div>
             </form>
         </div>

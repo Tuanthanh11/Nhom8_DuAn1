@@ -7,7 +7,7 @@ function insert_sanpham($tensp,$img,$gia,$size,$soluong,$mota,$iddm){
 function loadall_sanpham($kyw,$iddm){
     $sql="SELECT * FROM sanpham where 1";
     if($kyw!=""){
-         $sql.=" and name like '%".$kyw."%'";
+         $sql.=" and tensp like '%".$kyw."%'";
     }
     if($iddm>0){
        $sql.=" and iddm ='".$iddm."'";
@@ -17,11 +17,18 @@ function loadall_sanpham($kyw,$iddm){
     return $listsp;
 }
 
+
 function loadone_sanpham($id){
     $sql="SELECT * FROM sanpham WHERE id=".$id;
     $sanpham=pdo_query_one($sql);
     return $sanpham;
  }
+
+ function load_sanpham_cungloai($id,$iddm){
+   $sql="SELECT * FROM sanpham WHERE iddm=".$iddm." AND id <> ".$id;
+   $listsp=pdo_query($sql);
+   return $listsp;
+}
 
  function update_sanpham($id,$tensp,$img,$gia,$size,$soluong,$mota,$iddm){
     if($img!=""){
@@ -45,9 +52,14 @@ function loadall_sanpham_home(){
  }
 
  function loadall_sanphamvip_home(){
-    $sql="SELECT * FROM sanpham where 1 ORDER BY id DESC LIMIT 0,9";
+    $sql="SELECT * FROM sanpham where 1 ORDER BY id DESC LIMIT 0,8";
     $listsp=pdo_query($sql);
     return $listsp;
  }
+ function loadall_sanphamvip_sanpham(){
+   $sql="SELECT * FROM sanpham where 1 ORDER BY id DESC LIMIT 0,9";
+   $listsp=pdo_query($sql);
+   return $listsp;
+}
 
 ?>

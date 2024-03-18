@@ -1,19 +1,19 @@
-<div class="row bm frmtitle">
+<div class="container-fluid pt-4 px-4 ">
             <h1>Them moi san pham</h1>
         </div>
-        <div class="row">
+        <div class="bg-light rounded p-4 ">
             <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
                 <div class="row frmcontent">
                     Ten san pham <br>
-                    <input type="text" name="tensp" id=""><br><br>
+                    <input class="form-control" type="text" name="tensp" id=""><br>
                     Gia <br>
-                    <input type="text" name="gia" id=""><br><br>
+                    <input class="form-control" type="text" name="gia" id=""><br>
                     Size <br>
-                    <input type="text" name="size" id=""><br><br>
+                    <input class="form-control" type="text" name="size" id=""><br>
                     So luong <br>
-                    <input type="text" name="soluong" id=""><br><br>
+                    <input class="form-control" type="text" name="soluong" id=""><br>
                     Danh muc <br>
-                    <select name="iddm" id="">
+                    <select class="form-control" name="iddm" id="">
                         <?php
                         foreach ($listdm as $dm) {
                             extract($dm);
@@ -24,15 +24,15 @@
                     <br><br>
                     
                     Hinh <br>
-                    <input type="file" name="hinh" id=""><br><br>
+                    <input  type="file" name="hinh" id=""><br>
                     Mo ta<br>
                     <textarea name="mota" id="" cols="30" rows="10"></textarea>
                 </div>
                 
-                <div class="row frmcontent">
-                    <button type="submit" name="themsp" value="themsp" >Them moi</button>
-                    <button type="reset">Nhap lai</button>
-                    <a href="index.php?act=listsp"><button type="button">Danh sach</button></a>
+                <div class="pt-4">
+                    <button class="btn btn-primary" type="submit" name="themsp" value="themsp" >Them moi</button>
+                    <button class="btn btn-primary" type="reset">Nhap lai</button>
+                    <a href="index.php?act=listsp"><button class="btn btn-primary" type="button">Danh sach</button></a>
                 </div>
                 <?php
                 if(isset($thongbao)&&($thongbao!="")){
@@ -41,4 +41,4 @@
                 ?>
             </form>
         </div>
-    </div>
+    

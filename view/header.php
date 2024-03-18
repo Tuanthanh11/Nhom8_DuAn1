@@ -23,6 +23,15 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="view/css/style.css" rel="stylesheet">
+    <style>
+        .form_dk{
+            padding-left: 400px;
+            padding-right:400px;
+        }
+        .thongbao{
+            color:red;
+        }
+    </style>
 </head>
 
 <body>
@@ -126,8 +135,9 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                             <a href="index.php?act=sanpham" class="nav-item nav-link">Sản phẩm</a>
-                            <a href="index.php?act=chitietsp" class="nav-item nav-link">Chi tiết</a>
                             <a href="index.php?act=giohang" class="nav-item nav-link">Giỏ hàng</a>
+                            <a href="index.php?act=lienhe" class="nav-item nav-link">Góp ý</a>
+                            
                             <!-- <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
@@ -137,11 +147,29 @@
                             </div> -->
                             <a href="index.php?act=lienhe" class="nav-item nav-link">Liên hệ</a>
                         </div>
+
+                        <?php
+                        if(isset($_SESSION['user'])){
+                            extract($_SESSION['user']);
+
+                        ?>
+
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.php?act=dangnhap" class="nav-item nav-link"><?= $user ?></a>
+                            <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
+                        </div>
+
+                        <?php
+                        }else{
+                        ?>
                         <div class="navbar-nav ml-auto py-0">
                             <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
-
                             <a href="index.php?act=dangky" class="nav-item nav-link">Đăng ký</a>
                         </div>
+                            <?php
+                        }
+                            ?>
+                        
                     </div>
                 </nav>
                 <div id="header-carousel" class="carousel slide" data-ride="carousel">
