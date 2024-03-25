@@ -125,27 +125,15 @@
                 <div class="row pb-3">
                     <div class="col-12 pb-1">
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                        <form action="#" method="post">
-                            <input type="text" name="kyw" id="">
-                            <select name="iddm" id="">
-                                <option value="0" select>Tat ca</option>
-                                <?php
-                                    foreach ($listdm as $dm) {
-                                        extract($dm);
-                                        echo '<option value="'.$id.'">'.$tendm.'</option>';
-                                    }
-                                ?>
-                            </select>
-                            <input type="submit" name="listok" value="GO">
-                        </form>
+                        <h5 class="font-weight-semi-bold">Sản phẩm <?=$tendm?></h5>
                             
                         </div>
                     </div>
 
                     <?php
 
-                        foreach ($sp as $s) {
-                            extract($s);
+                        foreach ($listsp as $sp) {
+                            extract($sp);
                             $anh=$image.$hinhanh;
 
                             $idsp="index.php?act=sanphamct&idsp=".$id;

@@ -74,13 +74,11 @@
                 </a>
             </div>
             <div class="col-lg-6 col-6 text-left">
-                <form action="">
+                <form action="index.php?act=sanpham" method="post">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+                        <input type="text" name="kyw" class="form-control" placeholder="Tìm kiếm sản phẩm">
                         <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
+                            
                         </div>
                     </div>
                 </form>
@@ -111,15 +109,19 @@
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                         
-                        <a href="" class="nav-item nav-link">Thể thao</a>
-                        <a href="" class="nav-item nav-link">Nike</a>
-                        <a href="" class="nav-item nav-link">Adidas</a>
-                        <a href="" class="nav-item nav-link">Jordan</a>
-                        <a href="" class="nav-item nav-link">Bitis</a>
-                        <a href="" class="nav-item nav-link">Chạy bộ</a>
-                        <a href="" class="nav-item nav-link">Bóng dổ</a>
-                        <a href="" class="nav-item nav-link">Đá bóng</a>
-                        <a href="" class="nav-item nav-link">Đạp xe</a>
+                    <?php
+                            foreach ($dsdm as $dm) {
+                                extract($dm);
+                                $linkdm="index.php?act=sanpham&iddm=".$id;
+                           
+                            echo '
+                                    <a href="'.$linkdm.'" class="nav-item nav-link">'.$tendm.'</a>
+                                ';
+                            }
+                            ?>
+
+                        
+                        
                     </div>
                 </nav>
             </div>
@@ -136,7 +138,7 @@
                             <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                             <a href="index.php?act=sanpham" class="nav-item nav-link">Sản phẩm</a>
                             <a href="index.php?act=giohang" class="nav-item nav-link">Giỏ hàng</a>
-                            <a href="index.php?act=lienhe" class="nav-item nav-link">Góp ý</a>
+                            <a href="index.php?act=bill" class="nav-item nav-link">Thông tin</a>
                             
                             <!-- <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
@@ -145,7 +147,7 @@
                                     <a href="index.php?act=dangnhap" class="dropdown-item">dangnhap</a>
                                 </div>
                             </div> -->
-                            <a href="index.php?act=lienhe" class="nav-item nav-link">Liên hệ</a>
+                            <a href="index.php?act=lienhe" class="nav-item nav-link">Góp ý</a>
                         </div>
 
                         <?php
@@ -155,7 +157,12 @@
                         ?>
 
                         <div class="navbar-nav ml-auto py-0">
-                            <a href="index.php?act=dangnhap" class="nav-item nav-link"><?= $user ?></a>
+                            <?php if($role==1){ ?>
+
+                                    <a href="admin/index.php" class="nav-item nav-link">Admin</a>
+                               
+                            <?php }?>
+                            <a href="index.php?act=dangnhap" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
                             <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
                         </div>
 

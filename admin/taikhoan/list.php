@@ -43,7 +43,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <a href="../index.php"><button class="btn btn-primary" type="button">Home</button></a>
+                    <a href="../index.php"><button class="btn btn-primary" type="button">Chở về giao diện bán hàng</button></a>
                 </div>
             </form>
         </div>

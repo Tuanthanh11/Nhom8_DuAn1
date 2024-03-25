@@ -8,7 +8,7 @@
                 <div class="contact-form">
                     <form action="index.php?act=dangky" method="post">
                         <div class="control-group">
-                            User name: <br>
+                            Tên tài khoản: <br>
                             <input type="text" class="form-control" name="user"> <br>
                         </div>
                         <div class="control-group">
@@ -24,8 +24,12 @@
                             <input type="text" class="form-control" name="diachi"> <br>
                         </div>
                         <div class="control-group">
-                            Password: <br>
+                            Mật khẩu: <br>
                             <input type="password" class="form-control" name="pass"> <br>
+                        </div>
+                        <div class="control-group">
+                            Nhập lại mật khẩu: <br>
+                            <input type="password" class="form-control" name="nhaplai"> <br>
                         </div>
                         <div >
                             <input class="btn btn-primary py-2 px-4" type="submit" name="dangky" value="dang ky">
