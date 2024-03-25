@@ -108,10 +108,7 @@
         $idsp="index.php?act=sanphamct&idsp=".$id;
         echo '<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
-                    <input type="hidden" name="id" value="'.$id.'">
-                        <input type="hidden" name="name" value="'.$tensp.'">
-                        <input type="hidden" name="img" value="'.$hinhanh.'">
-                        <input type="hidden" name="price" value="'.$gia.'">
+                    
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
                         <a href="'.$idsp.'"><img class="img-fluid w-100" src="'.$anh.'" alt=""></a>
                     </div>
@@ -121,10 +118,16 @@
                             <h6>$'.$gia.'</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                         </div>
                     </div>
+                    <form action="index.php?act=addtocart" method="post">
+                    <input type="hidden" name="id" value="'.$id.'">
+                        <input type="hidden" name="tensp" value="'.$tensp.'">
+                        <input type="hidden" name="hinh" value="'.$hinhanh.'">
+                        <input type="hidden" name="gia" value="'.$gia.'">
                     <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="'.$idsp.'" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
+                    </form>
                 </div>
             </div>';
 

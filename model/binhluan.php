@@ -5,7 +5,11 @@ function insert_binhluan($noidung,$iduser,$idpro,$ngaybinhluan){
     pdo_execute($sql);
 }
 function loadall_binhluan($idpro){
-    $sql="SELECT * FROM binhluan WHERE idpro='".$idpro."' ORDER BY id DESC";
+    $sql="SELECT taikhoan.user AS ten, noidung, ngaybinhluan, idpro 
+    FROM binhluan 
+    JOIN taikhoan ON binhluan.iduser = taikhoan.id  
+    WHERE idpro='".$idpro."' 
+    ORDER BY binhluan.id DESC LIMIT 0, 25;";
     $listbl=pdo_query($sql);
     return $listbl;
  }

@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
         .pad_r{
             padding-right:50px;
@@ -68,7 +69,8 @@
                     <a href="index.php?act=listdm" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>Danh muc</a>
                     <a href="index.php?act=listsp" class="nav-item nav-link"><i class="fa fa-table me-2"></i>San pham</a>
                     <a href="index.php?act=dsbl" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Binh luan</a>
-                    <a href="index.php?act=dstk" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Thong ke</a>
+                    <a href="index.php?act=dsdh" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Don hang</a>
+                    <a href="index.php?act=thongke" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Thong ke</a>
                     <a href="index.php?act=dskh" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Tai khoan</a>
                 </div>
             </nav>

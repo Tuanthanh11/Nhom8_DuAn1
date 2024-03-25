@@ -5,6 +5,8 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/binhluan.php";
+include "../model/cart.php";
+include "../model/thongke.php";
 
 
 include "header.php";
@@ -141,6 +143,52 @@ switch ($act) {
                     $listbl = loadall_bladmin();
                     include "binhluan/list.php";
                     break;
+            // don hang
+            case 'dsdh':
+                $dsbill=loadall_bill();
+                include "donhang/list.php";
+                break;
+
+                case 'suadh':
+                    if(isset($_GET['id'])&&($_GET['id']>0)){
+                        $id=$_GET['id'];
+                        $donhang=loadone_billadmin($id);
+                        $idbill=$id;
+                        $billcart=loadall_cartadmin($idbill);
+                    }
+                    include "donhang/update.php";
+                    break;
+
+                case 'updatedh':
+                    if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                        $id=$_POST['id'];
+                        $trangthai=$_POST['trangthai'];
+                        
+                        update_bill($trangthai,$id);
+                    }
+                    $dsbill=loadall_bill();
+                    include "donhang/list.php";
+                    break;
+
+                case 'xoadh':
+                    if(isset($_GET['id'])&&($_GET['id']>0)){
+                        delete_bill($_GET['id']); 
+                    }
+                    $dsbill=loadall_bill();
+                    include "donhang/list.php";
+                    break;  
+
+
+                // thong ke
+                case 'thongke':
+                    $list_thongke = loadall_thongke();
+                    include "thongke/list.php";
+                    break;
+    
+                case 'bieudo':
+                    $list_thongke = loadall_thongke();
+                include "thongke/bieudo.php";
+                break;
 
 
     

@@ -4,7 +4,7 @@ function insert_sanpham($tensp,$img,$gia,$size,$soluong,$mota,$iddm){
     VALUES('$tensp','$img','$gia','$size','$soluong','$mota','$iddm')";
     pdo_execute($sql);
 }
-function loadall_sanpham($kyw,$iddm){
+function loadall_sanpham($kyw,$iddm=0){
     $sql="SELECT * FROM sanpham where 1";
     if($kyw!=""){
          $sql.=" and tensp like '%".$kyw."%'";
@@ -15,6 +15,17 @@ function loadall_sanpham($kyw,$iddm){
     $sql.=" ORDER BY id DESC";
     $listsp=pdo_query($sql);
     return $listsp;
+}
+
+function load_ten_danhmuc($iddm){
+   if($iddm>0){
+      $sql="SELECT * FROM danhmuc WHERE id=".$iddm;
+      $dm=pdo_query_one($sql);
+      extract($dm);
+      return $tendm;
+   }else {
+      return "";
+   }
 }
 
 
@@ -56,10 +67,6 @@ function loadall_sanpham_home(){
     $listsp=pdo_query($sql);
     return $listsp;
  }
- function loadall_sanphamvip_sanpham(){
-   $sql="SELECT * FROM sanpham where 1 ORDER BY id DESC LIMIT 0,9";
-   $listsp=pdo_query($sql);
-   return $listsp;
-}
+
 
 ?>
