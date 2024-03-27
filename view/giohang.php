@@ -2,7 +2,7 @@
     <!-- Cart Start -->
     <div class="container-fluid pt-5">
     <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Chi tiết giỏi hàng</span></h2>
+            <h2 class="section-title px-5"><span class="px-2">Chi tiết giỏ hàng</span></h2>
         </div>
         <div class="row px-xl-5">
             <div class="col-lg-8 table-responsive mb-5">

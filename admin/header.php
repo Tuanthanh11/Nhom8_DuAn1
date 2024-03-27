@@ -65,13 +65,13 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Trang chu</a>
-                    <a href="index.php?act=listdm" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>Danh muc</a>
-                    <a href="index.php?act=listsp" class="nav-item nav-link"><i class="fa fa-table me-2"></i>San pham</a>
-                    <a href="index.php?act=dsbl" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Binh luan</a>
-                    <a href="index.php?act=dsdh" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Don hang</a>
-                    <a href="index.php?act=thongke" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Thong ke</a>
-                    <a href="index.php?act=dskh" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Tai khoan</a>
+                    <a href="index.php" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Trang chủ</a>
+                    <a href="index.php?act=listdm" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>Danh mục</a>
+                    <a href="index.php?act=listsp" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Sản phẩm</a>
+                    <a href="index.php?act=dsbl" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Bình luận</a>
+                    <a href="index.php?act=dsdh" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Đơn hàng</a>
+                    <a href="index.php?act=thongke" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Thống kê</a>
+                    <a href="index.php?act=dskh" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Tài khoản</a>
                 </div>
             </nav>
         </div>
@@ -163,7 +163,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="../index.php?act=thoat" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>

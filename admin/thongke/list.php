@@ -1,5 +1,5 @@
 <div class="container-fluid pt-4 px-4">
-            <h1>Danh sach thong ke</h1>
+            <h1>Danh sách thống kê</h1>
         </div>
         <div class="bg-light rounded p-4">
             <form action="" method="post">
@@ -34,7 +34,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <a href="index.php?act=bieudo"><button class="btn btn-primary" type="button">Xem bieu do</button></a>
+                    <a href="index.php?act=bieudo"><button class="btn btn-primary" type="button">Xem biểu đồ</button></a>
                 </div>
             </form>
         </div>

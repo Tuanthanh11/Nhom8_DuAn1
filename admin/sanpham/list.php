@@ -1,10 +1,10 @@
 <div class="container-fluid pt-4 px-4 ">
-            <h1>Danh sach san pham</h1>
+            <h1>Danh sách sản phẩm</h1>
         </div>
         <form  action="#" method="post">
             <input  type="text" name="kyw" id="">
             <select name="iddm" id="">
-                <option value="0" select>Tat ca</option>
+                <option value="0" select>Tất cả</option>
                 <?php
                     foreach ($listdm as $dm) {
                         extract($dm);
@@ -21,15 +21,15 @@
                    <table class="table">
                     <tr>
                         <th></th>
-                        <th>Ma san pham</th>
-                        <th>Ten san pham</th>
-                        <th>Hinh</th>
-                        <th>Gia</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình</th>
+                        <th>Giá</th>
                         <th>Size</th>
-                        <th>So luong</th>
-                        <th>Luot xem</th>
-                        <th>mota</th>
-                        <th>Chuc nang</th>
+                        <th>Số lượng</th>
+                        <th>Lượt xem</th>
+                        <th>mô tả</th>
+                        <th>Chức năng</th>
                     </tr>
                     <?php 
                         foreach($listsp as $sp){
@@ -54,8 +54,8 @@
                             <td>'.$soluong.'</td>
                             <td>'.$luotxem.'</td>
                             <td>'.$mota.'</td>
-                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sua</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xoa</button></a>
+                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sửa</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xóa</button></a>
                              </td>
                             </tr>
                             ';
@@ -66,7 +66,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <a href="index.php?act=addsp"><button class="btn btn-primary" type="button">Nhap them</button></a>
+                    <a href="index.php?act=addsp"><button class="btn btn-primary" type="button">Nhập thêm</button></a>
                 </div>
             </form>
         </div>

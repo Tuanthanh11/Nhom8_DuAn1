@@ -9,27 +9,27 @@
                     <form action="index.php?act=dangky" method="post">
                         <div class="control-group">
                             Tên tài khoản: <br>
-                            <input type="text" class="form-control" name="user"> <br>
+                            <input type="text" class="form-control" name="user" required> <br>
                         </div>
                         <div class="control-group">
                             Email: <br>
-                            <input type="email" class="form-control" name="email"> <br>
+                            <input type="email" class="form-control" name="email" required> <br>
                         </div>
                         <div class="control-group">
                             SDT: <br>
-                            <input type="text" class="form-control" name="sdt"> <br>
+                            <input type="text" class="form-control" name="sdt" required> <br>
                         </div>
                         <div class="control-group">
                             Dia chi: <br>
-                            <input type="text" class="form-control" name="diachi"> <br>
+                            <input type="text" class="form-control" name="diachi" required> <br>
                         </div>
                         <div class="control-group">
                             Mật khẩu: <br>
-                            <input type="password" class="form-control" name="pass"> <br>
+                            <input type="password" class="form-control" name="pass" required> <br>
                         </div>
                         <div class="control-group">
                             Nhập lại mật khẩu: <br>
-                            <input type="password" class="form-control" name="nhaplai"> <br>
+                            <input type="password" class="form-control" name="nhaplai" required> <br>
                         </div>
                         <div >
                             <input class="btn btn-primary py-2 px-4" type="submit" name="dangky" value="dang ky">

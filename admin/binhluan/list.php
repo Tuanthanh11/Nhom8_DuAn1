@@ -8,10 +8,10 @@
                     <tr>
                         <th></th>
                         <th>id</th>
-                        <th>Noi dung</th>
+                        <th>Nội dung</th>
                         <th>iduser</th>
                         <th>idpro</th>
-                        <th>ngaybinhluan</th>
+                        <th>ngàybìnhluận</th>
                         
                         <th></th>
                     </tr>
@@ -30,7 +30,7 @@
                             <td>'.$ngaybinhluan.'</td>
             
                             <td> 
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoabl.'"><button class="btn btn-primary" type="button">Xoa</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoabl.'"><button class="btn btn-primary" type="button">Xóa</button></a>
                              </td>
                             </tr>
                             ';
@@ -41,7 +41,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <a href="../index.php"><button class="btn btn-primary" type="button">Home</button></a>
+                    <a href="../index.php"><button class="btn btn-primary" type="button">Trang chủ</button></a>
                 </div>
             </form>
         </div>

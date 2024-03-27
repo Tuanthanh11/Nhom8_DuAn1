@@ -1,5 +1,5 @@
 <div class="container-fluid pt-4 px-4 ">
-            <h1>Danh sach don hang</h1>
+            <h1>Danh sách đơn hàng</h1>
         </div>
         
         <div class="bg-light rounded p-4">
@@ -8,15 +8,15 @@
                    <table class="table">
                     <tr>
                         <th></th>
-                        <th>Ma don hang</th>
-                        <th>Ten khach hang</th>
-                        <th>email</th>
-                        <th>Dia chi</th>
+                        <th>Mã đơn hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
                         <th>Sdt</th>
-                        <th>Phuong thuc thanh toan</th>
-                        <th>Ngay dat</th>
-                        <th>Tongg tien</th>
-                        <th>trang thai</th>
+                        <th>Phương thức thanh toán</th>
+                        <th>Ngày đặt</th>
+                        <th>Tổng tiền</th>
+                        <th>trạng thái</th>
                     </tr>
                     <?php 
                         foreach($dsbill as $dh){
@@ -44,7 +44,7 @@
                             /////
                             switch ($trangthai) {
                                 case '0':
-                                    $tt="Đang sử lý";
+                                    $tt="Đang xử lý";
                                     break;
     
                                     case '1':
@@ -75,8 +75,8 @@
                             <td>'.$ngaydathang.'</td>
                             <td>'.$tongdonhang.'</td>
                             <td>'.$tt.'</td>
-                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sua</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xoa</button></a>
+                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sửa</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xóa</button></a>
                              </td>
                             </tr>
                             ';
@@ -87,7 +87,7 @@
                 </div>
                 
                 <div class="row frmcontent">
-                    <a href="index.php?act=addsp"><button class="btn btn-primary" type="button">Nhap them</button></a>
+                    <a href="index.php?act=addsp"><button class="btn btn-primary" type="button">Nhập thêm</button></a>
                 </div>
             </form>
         </div>
