@@ -1,5 +1,5 @@
 <div class="row bm frmtitle">
-            <h1>Bieu do thong ke</h1>
+            <h1>Biểu đồ thống kê</h1>
         </div>
         <div class="row">
             <form action="" method="post">

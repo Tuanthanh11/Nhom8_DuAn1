@@ -44,7 +44,7 @@
                                 <?php
                                 switch ($trangthai) {
                                     case '0':
-                                        $tt="Đang sử lý";
+                                        $tt="Đang xử lý";
                                         break;
 
                                         case '1':
@@ -126,7 +126,7 @@
                             
                         <h5 class="font-weight-bold">Cập nhật trạng thái</h5>
                             <select name="trangthai" id="">
-                                <option value="0">Đang sử lý</option>
+                                <option value="0">Đang xử lý</option>
                                 <option value="1">Đang giao hàng</option>
                                 <option value="2">Đã nhận hàng</option>
                                 <option value="3">Hủy</option>
