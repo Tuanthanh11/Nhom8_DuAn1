@@ -162,7 +162,7 @@
                                     <a href="admin/index.php" class="nav-item nav-link">Admin</a>
                                
                             <?php }?>
-                            <a href="index.php?act=dangnhap" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
+                            <a href="index.php" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
                             <a href="index.php?act=edit_taikhoan" class="nav-item nav-link">Chỉnh sửa thông tin</a>
                             <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
                         </div>

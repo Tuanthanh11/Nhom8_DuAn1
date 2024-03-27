@@ -1,7 +1,7 @@
 <!-- Contact Start -->
 <div class="container-fluid pt-5 ">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Đăng Ký tai khoan</span></h2>
+            <h2 class="section-title px-5"><span class="px-2">Đăng Ký tài khoản</span></h2>
         </div>
         
             <div class=" form_dk ">
@@ -16,11 +16,11 @@
                             <input type="email" class="form-control" name="email" required> <br>
                         </div>
                         <div class="control-group">
-                            SDT: <br>
+                            Số điện thoại: <br>
                             <input type="text" class="form-control" name="sdt" required> <br>
                         </div>
                         <div class="control-group">
-                            Dia chi: <br>
+                            Địa chỉ: <br>
                             <input type="text" class="form-control" name="diachi" required> <br>
                         </div>
                         <div class="control-group">
@@ -32,7 +32,9 @@
                             <input type="password" class="form-control" name="nhaplai" required> <br>
                         </div>
                         <div >
-                            <input class="btn btn-primary py-2 px-4" type="submit" name="dangky" value="dang ky">
+                            <input class="btn btn-primary py-2 px-4" type="submit" name="dangky" value="Đăng ký">
+                            <input class="btn btn-primary py-2 px-4" type="reset" value="Nhập lại">
+                            <a href="index.php?act=dangnhap" class="btn btn-primary py-2 px-4">Đăng nhập</a>
                         </div>
                     </form>
 
