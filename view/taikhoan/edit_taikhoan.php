@@ -30,7 +30,7 @@
                 </div>
                 <div class="control-group">
                     Mật khẩu: <br>
-                    <input type="password" class="form-control" name="pass" value="<?= $pass ?>"> <br>
+                    <input type="text" class="form-control" name="pass" value="<?= $pass ?>"> <br>
                 </div>
                 <div>
                     <input type="hidden" name="id" value="<?= $id ?>">
