@@ -78,7 +78,7 @@
 
             case 'thoat':
                 session_unset();
-                header("location: http://localhost:81/duan1/index.php");
+                header("location: index.php");
                     break;
             case 'lienhe':
                 include "view/lienhe.php";
@@ -157,7 +157,7 @@
                 }else {
                     $_SESSION['mycart']=[];
                 }
-                header("Location:http://localhost:81/duan1/index.php?act=addtocart");
+                header("Location:index.php?act=addtocart");
                 break;
             
 

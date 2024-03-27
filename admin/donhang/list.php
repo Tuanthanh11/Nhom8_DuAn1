@@ -75,8 +75,8 @@
                             <td>'.$ngaydathang.'</td>
                             <td>'.$tongdonhang.'</td>
                             <td>'.$tt.'</td>
-                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sua</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xoa</button></a>
+                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Chi tiết</button></a>
+                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xoa sp</button></a>
                              </td>
                             </tr>
                             ';
