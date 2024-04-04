@@ -21,11 +21,11 @@
                     <input type="email" class="form-control" name="email" value="<?= $email ?>"> <br>
                 </div>
                 <div class="control-group">
-                    SDT: <br>
+                    Số điện thoại: <br>
                     <input type="text" class="form-control" name="sdt" value="<?= $sdt ?>"> <br>
                 </div>
                 <div class="control-group">
-                    Dia chi: <br>
+                    Địa chỉ: <br>
                     <input type="text" class="form-control" name="diachi" value="<?= $diachi ?>"> <br>
                 </div>
                 <div class="control-group">
