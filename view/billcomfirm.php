@@ -124,6 +124,11 @@
                 </div>
             </div>';
             ?>
+
+                    </div>
+                        
+                        <a href="index.php?act=lichsu" class="btn btn-block btn-primary my-3 py-3" >Lich su mua hang</a>
+                    </div>
                 
                </div> 
             </form>
