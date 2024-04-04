@@ -14,11 +14,12 @@
                 <div>
                     <input class="btn btn-primary py-2 px-4" type="submit" name="guiemail" value="Gửi">
                     <input class="btn btn-primary py-2 px-4" type="reset" name="" value="Nhập lại">
+                    <a href="index.php?act=dangnhap" class="btn btn-primary py-2 px-4">Đăng nhập</a>
                 </div>
             </form>
 
             <?php
-            if (isset ($thongbao) && ($thongbao != "")) {
+            if (isset($thongbao) && ($thongbao != "")) {
                 echo '<div class="thongbao">' . $thongbao . '</div>';
             }
             ?>
