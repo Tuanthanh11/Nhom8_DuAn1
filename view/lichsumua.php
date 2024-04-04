@@ -1,5 +1,5 @@
 <div class="container-fluid pt-4 px-4 ">
-            <h1>Danh sách đơn hàng</h1>
+            <h1>Lịch sử mua hàng</h1>
         </div>
         
         <div class="bg-light rounded p-4">
@@ -10,36 +10,19 @@
                         <th></th>
                         <th>Mã đơn hàng</th>
                         <th>Tên khách hàng</th>
-                        <th>Email</th>
+                        
                         <th>Địa chỉ</th>
                         <th>Sdt</th>
-                        <th>Phương thức thanh toán</th>
+                        
                         <th>Ngày đặt</th>
                         <th>Tổng tiền</th>
                         <th>trạng thái</th>
                     </tr>
                     <?php 
-                        foreach($dsbill as $dh){
+                        foreach($lichsu as $dh){
                             extract($dh);
                             $suasp="index.php?act=suadh&id=".$id;
                             $xoasp="index.php?act=xoadh&id=".$id;
-
-                            switch ($pttt) {
-                                case '0':
-                                    $txtmess="Thanh toán khi nhận hàng";
-                                    break;
-    
-                                    case '1':
-                                        $txtmess="Thanh toán online";
-                                        break;
-                                        case '2':
-                                            $txtmess="Thanh toán qua QRcode";
-                                            break;
-                                
-                                default:
-                                    $txtmess="quý khách chưa chọn phương thức thanh toán";
-                                    break;
-                            }
 
                             /////
                             switch ($trangthai) {
@@ -68,15 +51,14 @@
                             <td><input type="checkbox" name="" id=""></td>
                             <td>'.$id.'</td>
                             <td>'.$user.'</td>
-                            <td>'.$email.'</td>
+                            
                             <td>'.$diachi.'</td>
                             <td>'.$sdt.'</td>
-                            <td>'.$txtmess.'</td>
+                            
                             <td>'.$ngaydathang.'</td>
                             <td>'.$tongdonhang.'</td>
                             <td>'.$tt.'</td>
-                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Chi tiết</button></a>
-    
+                            <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Chi tiet</button></a>
                              </td>
                             </tr>
                             ';
@@ -85,5 +67,6 @@
                    
                    </table>
                 </div>
+                
             </form>
         </div>

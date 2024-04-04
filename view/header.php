@@ -140,14 +140,7 @@
                             <a href="index.php?act=giohang" class="nav-item nav-link">Giỏ hàng</a>
                             <a href="index.php?act=bill" class="nav-item nav-link">Thông tin</a>
                             
-                            <!-- <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="index.php?act=giohang" class="dropdown-item">Giỏ hàng</a>
-                                    <a href="index.php?act=dangnhap" class="dropdown-item">dangnhap</a>
-                                </div>
-                            </div> -->
-                            <a href="index.php?act=lienhe" class="nav-item nav-link">Góp ý</a>
+                            
                         </div>
 
                         <?php
@@ -162,8 +155,11 @@
                                     <a href="admin/index.php" class="nav-item nav-link">Admin</a>
                                
                             <?php }?>
-                            <a href="index.php?act=dangnhap" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
+
+                            <a href="index.php?act=lichsu" class="nav-item nav-link">Đơn hàng</a>
                             <a href="index.php?act=edit_taikhoan" class="nav-item nav-link">Chỉnh sửa thông tin</a>
+                            
+                            <a href="index.php?act=dangnhap" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
                             <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
                         </div>
 

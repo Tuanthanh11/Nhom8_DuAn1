@@ -23,6 +23,31 @@ function loadone_bill($idbill){
     $bill=pdo_query_one($sql);
     return $bill;
  }
+ function getPDOConnection() {
+    $dsn = 'mysql:host=localhost;dbname=peak_sport;charset=utf8';
+    $username = 'your_username';
+    $password = 'your_password';
+
+    try {
+        $pdo = new PDO($dsn, $username, $password);
+        return $pdo;
+    } catch (PDOException $e) {
+        die('Kết nối không thành công: ' . $e->getMessage());
+    }
+}
+
+
+ function loadall_lichsu($ten){
+    $sql = "SELECT * FROM `bill` WHERE `user` = :ten ORDER BY id DESC" ;
+    $pdo = getPDOConnection(); 
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':ten', $ten, PDO::PARAM_STR);
+    $stmt->execute();
+    $listdh = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $listdh;
+}
+
 
  // admin
  function loadall_bill(){

@@ -34,6 +34,7 @@ if ((isset ($_GET['act'])) && ($_GET['act'] != "")) {
 
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
+                    $_SESSION['ten']=$user;
                     $thongbao = "Đăng nhập thành công";
                     header("location: index.php");
                     exit(); // Thêm exit() để dừng việc thực thi mã sau khi chuyển hướng
@@ -224,6 +225,23 @@ if ((isset ($_GET['act'])) && ($_GET['act'] != "")) {
 
         case 'chitietsp':
             include "view/chitietsp.php";
+            break;  
+
+        case 'lichsu':
+            if(isset($_SESSION['user'])){
+                $ten = $_SESSION['ten'];
+                $lichsu =loadall_lichsu($ten);
+            }
+            include "view/lichsumua.php";
+            break;
+        case 'suadh':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id=$_GET['id'];
+                $donhang=loadone_billadmin($id);
+                $idbill=$id;
+                $billcart=loadall_cartadmin($idbill);
+            }
+            include "view/ctdh.php";
             break;
 
         default:
