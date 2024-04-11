@@ -6,11 +6,10 @@
                 <div class="">
                    <table class="table">
                     <tr>
-                        <th></th>
                         <th>id</th>
+                        <th>user</th>
+                        <th>tensp</th>
                         <th>Nội dung</th>
-                        <th>iduser</th>
-                        <th>idpro</th>
                         <th>ngàybìnhluận</th>
                         
                         <th></th>
@@ -22,11 +21,11 @@
                             $xoabl="index.php?act=xoabl&id=".$id;
                             echo '
                                 <tr>
-                            <td><input type="checkbox" name="" id=""></td>
+                            
                             <td>'.$id.'</td>
+                            <td>'.$ten.'</td>`
+                            <td>'.$tensp.'</td>
                             <td>'.$noidung.'</td>
-                            <td>'.$iduser.'</td>`
-                            <td>'.$idpro.'</td>
                             <td>'.$ngaybinhluan.'</td>
             
                             <td> 

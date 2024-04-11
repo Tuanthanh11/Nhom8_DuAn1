@@ -1,5 +1,5 @@
 <div class="container-fluid pt-4 px-4">
-            <h1>Danh sách thống kê</h1>
+            <h1>Danh sách thống kê theo danh mục sản phẩm</h1>
         </div>
         <div class="bg-light rounded p-4">
             <form action="" method="post">

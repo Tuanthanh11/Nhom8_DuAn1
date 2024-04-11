@@ -32,7 +32,7 @@
                         <small class="fas fa-star-half-alt"></small>
                         <small class="far fa-star"></small>
                     </div>
-                    <small class="pt-1">(50 Reviews)</small>
+                    <small class="pt-1">(còn <?= $soluong?> sản phẩm)</small>
                 </div>
                 <?php
                 echo '<h3 class="font-weight-semi-bold mb-4">$'.$gia.'</h3>';

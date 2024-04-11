@@ -6,7 +6,7 @@
         <div class="">
             <table class="table">
                 <tr>
-                    <th></th>
+                  
                     <th>Ma tk</th>
                     <th>Username</th>
                     <!-- <th>Password</th> -->
@@ -23,7 +23,7 @@
                     $xoadtk = "index.php?act=xoatk&id=" . $id;
                     echo '
                                 <tr>
-                            <td><input type="checkbox" name="" id=""></td>
+                           
                             <td>' . $id . '</td>
                             <td>' . $user . '</td>`
                             
@@ -32,7 +32,7 @@
                             <td>' . $sdt . '</td>
                             <td>' . $role . '</td>
                             <td> <a href="' . $suatk . '"><button class="btn btn-primary" type="button">Sửa</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="' . $xoadtk . '"><button class="btn btn-primary" type="button">Xóa</button></a>
+                              
                              </td>
                             </tr>
                             ';

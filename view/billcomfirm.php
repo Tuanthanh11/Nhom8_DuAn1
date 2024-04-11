@@ -49,20 +49,27 @@
 
                 <li><strong>Trang thái:</strong>  
                         <?php
-                        switch ($bill['trangthai']) {
+                        switch ($trangthai) {
                             case '0':
-                                $trangthai="Đang sử lý";
+                                $tt="Chờ xác nhận";
                                 break;
 
                                 case '1':
-                                    $trangthai="Đang giao hàng";
+                                    $tt="Đã xác nhận";
                                     break;
                                     case '2':
-                                        $trangthai="Đã nhận hàng";
+                                        $tt="Đang giao hàng";
                                         break;
+                                        case '3':
+                                            $tt="Đã nhận hàng ";
+                                            break;
+                                            case '4':
+                                                $tt="Hủy";
+                                                break;
+                                               
                             
                             default:
-                                $trangthai="";
+                                $tt="";
                                 break;
                         }
                         ?>

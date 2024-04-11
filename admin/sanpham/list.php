@@ -20,14 +20,13 @@
                 <div class="row frmcontent">
                    <table class="table">
                     <tr>
-                        <th></th>
+                        
                         <th>Mã sản phẩm</th>
                         <th>Tên sản phẩm</th>
                         <th>Hình</th>
                         <th>Giá</th>
                         <th>Size</th>
                         <th>Số lượng</th>
-                        <th>Lượt xem</th>
                         <th>mô tả</th>
                         <th>Chức năng</th>
                     </tr>
@@ -45,17 +44,16 @@
 
                             echo '
                                 <tr>
-                            <td><input type="checkbox" name="" id=""></td>
+                           
                             <td>'.$id.'</td>
                             <td>'.$tensp.'</td>
                             <td>'.$img.'</td>
                             <td>'.$gia.'</td>
                             <td>'.$size.'</td>
                             <td>'.$soluong.'</td>
-                            <td>'.$luotxem.'</td>
                             <td>'.$mota.'</td>
                             <td> <a href="'.$suasp.'"><button class="btn btn-primary" type="button">Sửa</button></a>
-                              <a onclick="return confirm(\'Bạn có chắc chắn muốn xóa\')" href="'.$xoasp.'"><button class="btn btn-primary" type="button">Xóa</button></a>
+                             
                              </td>
                             </tr>
                             ';

@@ -6,6 +6,7 @@
         </div>
         <div class="row px-xl-5">
             <div class="col-lg-8 table-responsive mb-5">
+                <form action="index.php?act=capnhatcart" method="post">
                 <table class="table table-bordered text-center mb-0">
                     <thead class="bg-secondary text-dark">
                         <tr>
@@ -19,6 +20,7 @@
                     </thead>
                     <tbody class="align-middle">
                         <?php
+
                         $tong=0;
                         $i=0;
                         foreach($_SESSION['mycart'] as $cart){
@@ -26,23 +28,32 @@
                             $ttien= intval($cart[2]) * $cart[4];
                             $tong+=$ttien;
                             $xoa='<a href="index.php?act=delcart&idcart='.$i.'"><button class="btn btn-sm btn-primary" type="button">Xoa</button></a>';
+                            
                             echo '<tr>
                             <td class="align-middle"><img src="'.$hinh.'" alt="" style="width: 50px;">'.$cart[1].'</td>
-                            <td class="align-middle">'.$cart[2].'</td>
+                            <td class="align-middle" name="gia">'.$cart[2].'</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="'.$cart[4].'">
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" name="soluong" value="'.$cart[4].'">
                                 </div>
                             </td>
+
+
                             <td class="align-middle">'.$cart[5].'</td>
                             <td class="align-middle">$'.$ttien.'</td>
                             <td>'.$xoa.'</td>
                         </tr>';
                             $i+=1;   
                         }
-                        ?>  
+
+                        ?>
+                          
                     </tbody>
                 </table>
+                <!-- <div class="" style="float: right ">
+                <input type="submit" name="capnhat" value="capnhat">
+                </div> -->
+                </form>
             </div>
             <?php
             echo '<div class="col-lg-4">

@@ -7,12 +7,9 @@
                 <div class="row frmcontent">
                    <table class="table">
                     <tr>
-                        <th></th>
+                        
                         <th>Mã đơn hàng</th>
                         <th>Tên khách hàng</th>
-                        <th>Email</th>
-                        <th>Địa chỉ</th>
-                        <th>Sdt</th>
                         <th>Phương thức thanh toán</th>
                         <th>Ngày đặt</th>
                         <th>Tổng tiền</th>
@@ -44,18 +41,22 @@
                             /////
                             switch ($trangthai) {
                                 case '0':
-                                    $tt="Đang xử lý";
+                                    $tt="Chờ xác nhận";
                                     break;
     
                                     case '1':
-                                        $tt="Đang giao hàng";
+                                        $tt="Đã xác nhận";
                                         break;
                                         case '2':
-                                            $tt="Đã nhận hàng";
+                                            $tt="Đang giao hàng";
                                             break;
                                             case '3':
-                                                $tt="Hủy";
+                                                $tt="Đã nhận hàng ";
                                                 break;
+                                                case '4':
+                                                    $tt="Hủy";
+                                                    break;
+                                                   
                                 
                                 default:
                                     $tt="";
@@ -65,12 +66,9 @@
 
                             echo '
                                 <tr>
-                            <td><input type="checkbox" name="" id=""></td>
+                           
                             <td>'.$id.'</td>
                             <td>'.$user.'</td>
-                            <td>'.$email.'</td>
-                            <td>'.$diachi.'</td>
-                            <td>'.$sdt.'</td>
                             <td>'.$txtmess.'</td>
                             <td>'.$ngaydathang.'</td>
                             <td>'.$tongdonhang.'</td>
