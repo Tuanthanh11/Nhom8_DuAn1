@@ -4,6 +4,10 @@ function insert_danhmuc($tendm){
     $sql="INSERT INTO danhmuc(tendm) VALUES ('$tendm')";
     pdo_execute($sql);
 }
+function check_tendm($tendm){
+    $sql="SELECT COUNT(*) FROM danhmuc WHERE tendm = ? ";
+    return pdo_query_value($sql, $tendm) > 0;
+}
 
 function loadall_danhmuc(){
     $sql="SELECT * FROM danhmuc ORDER BY id DESC";

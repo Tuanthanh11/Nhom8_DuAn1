@@ -15,7 +15,11 @@ function loadall_binhluan($idpro){
  }
 //ADMIN
 function loadall_bladmin(){
-    $sql="SELECT * FROM binhluan ORDER BY id DESC";
+    $sql="SELECT binhluan.id AS id, taikhoan.user AS ten, sanpham.tensp AS tensp, noidung, ngaybinhluan
+    FROM binhluan 
+    JOIN taikhoan ON binhluan.iduser = taikhoan.id  
+    JOIN sanpham ON binhluan.idpro = sanpham.id
+    ORDER BY binhluan.id DESC LIMIT 0, 25;";
     $listbl=pdo_query($sql);
     return $listbl;
  }

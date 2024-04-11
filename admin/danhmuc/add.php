@@ -4,8 +4,7 @@
         <div class="bg-light rounded p-4 ">
         <form action="index.php?act=adddm" method="post">
                 <div class="row frmcontent">
-                    Mã loại <br>
-                    <input class="form-control" type="text" name="madm" id=""><br>
+                   
                     Tên loại <br>
                     <input class="form-control" type="text" name="tendm" id=""><br>
                 </div>

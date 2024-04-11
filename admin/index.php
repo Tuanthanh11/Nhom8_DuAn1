@@ -17,8 +17,13 @@ switch ($act) {
     case 'adddm':
         if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
             $tendm=$_POST['tendm'];
-            insert_danhmuc($tendm);
-            $thongbao="them thanh cong";
+            if(check_tendm($tendm) > 0){
+                $thongbao="Tên danh mục đã tồn tại ";
+            }else{
+               insert_danhmuc($tendm);
+                $thongbao="them thanh cong"; 
+            }
+            
         }
         include "danhmuc/add.php";
         break;

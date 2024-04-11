@@ -46,20 +46,24 @@
 
                 <li><strong>Trang thái:</strong>  
                 <?php
-                                switch ($trangthai) {
+                                  switch ($trangthai) {
                                     case '0':
-                                        $tt="Đang xử lý";
+                                        $tt="Chờ xác nhận";
                                         break;
-
+        
                                         case '1':
-                                            $tt="Đang giao hàng";
+                                            $tt="Đã xác nhận";
                                             break;
                                             case '2':
-                                                $tt="Đã nhận hàng";
+                                                $tt="Đang giao hàng";
                                                 break;
-                                            case '3':
-                                                $tt="Hủy";
-                                                break;
+                                                case '3':
+                                                    $tt="Đã nhận hàng ";
+                                                    break;
+                                                    case '4':
+                                                        $tt="Hủy";
+                                                        break;
+                                                       
                                     
                                     default:
                                         $tt="";

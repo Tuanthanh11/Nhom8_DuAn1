@@ -42,25 +42,29 @@
 
                         <li><strong>Trang thái:</strong>  
                                 <?php
-                                switch ($trangthai) {
-                                    case '0':
-                                        $tt="Đang xử lý";
+                               switch ($trangthai) {
+                                case '0':
+                                    $tt="Chờ xác nhận";
+                                    break;
+    
+                                    case '1':
+                                        $tt="Đã xác nhận";
                                         break;
-
-                                        case '1':
+                                        case '2':
                                             $tt="Đang giao hàng";
                                             break;
-                                            case '2':
-                                                $tt="Đã nhận hàng";
-                                                break;
                                             case '3':
-                                                $tt="Hủy";
+                                                $tt="Đã nhận hàng ";
                                                 break;
-                                    
-                                    default:
-                                        $tt="";
-                                        break;
-                                }
+                                                case '4':
+                                                    $tt="Hủy";
+                                                    break;
+                                                   
+                                
+                                default:
+                                    $tt="";
+                                    break;
+                            }
                                 ?>
                                 <?= $tt?>
                         
@@ -126,15 +130,16 @@
                             
                         <h5 class="font-weight-bold">Cập nhật trạng thái</h5>
                             <select name="trangthai" id="">
-                                <option value="0">Đang xử lý</option>
-                                <option value="1">Đang giao hàng</option>
-                                <option value="2">Đã nhận hàng</option>
-                                <option value="3">Hủy</option>
+                                <option value="0">Chờ xác nhận</option>
+                                <option value="1">Đã xác nhận</option>
+                                <option value="2">Đang giao hàng</option>
+                                <option value="3">Đã nhận hàng</option>
+                                <option value="4">Hủy</option>
                             </select>
                             <input type="hidden" name="id" value="<?= $id?>">
                             <input type="submit" name="capnhat" value="Cập nhật">
                         </form>
-            </div>
+                </div>
 </div>
     </div>
     <!-- Contact End -->
