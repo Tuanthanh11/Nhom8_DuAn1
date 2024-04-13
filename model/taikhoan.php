@@ -25,11 +25,20 @@ function checkemail($email)
     $sp = pdo_query_one($sql);
     return $sp;
 }
-function update_taikoan($id, $user, $pass, $email, $diachi, $sdt)
+function loadone_taikhoan($id)
+{
+    $sql = "SELECT*FROM taikhoan WHERE id=" . $id;
+    $taikhoan = pdo_query_one($sql);
+    return $taikhoan;
+}
+function update_taikoan($id, $user, $pass, $email, $diachi, $sdt,$role)
 {
 
-    $sql = "UPDATE taikhoan SET user='" . $user . "',pass='" . $pass . "',email='" . $email . "',diachi='" . $diachi . "' ,sdt='" . $sdt . "' WHERE id=" . $id;
+    $sql = "UPDATE taikhoan SET user='" . $user . "',pass='" . $pass . "',email='" . $email . "',diachi='" . $diachi . "' ,sdt='" . $sdt . "',role='" . $role . "' WHERE id=" . $id;
     pdo_execute($sql);
 }
-
+function delete_taikhoan($id){
+    $sql="DELETE FROM taikhoan WHERE id=".$id;
+    pdo_execute($sql);
+}
 ?>
