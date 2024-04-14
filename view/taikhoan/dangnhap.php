@@ -18,7 +18,7 @@
                 <div>
                     <input class="btn btn-primary py-2 px-4" type="submit" name="dangnhap" value="Đăng nhập">
                     <a href="index.php?act=quenmk" class="btn btn-primary py-2 px-4">Quên mật khẩu</a>
-                    <input class="btn btn-primary py-2 px-4" type="reset" value="Nhập lại">
+                    <a href="index.php?act=dangky" class="btn btn-primary py-2 px-4">Đăng Ký</a>
                 </div>
             </form>
 

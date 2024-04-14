@@ -6,7 +6,7 @@
         <div class="">
             <table class="table">
                 <tr>
-                  
+
                     <th>Ma tk</th>
                     <th>Username</th>
                     <!-- <th>Password</th> -->
@@ -42,7 +42,8 @@
             </table>
         </div>
 
-        <div class="row frmcontent">
+        <div>
+            <a href="index.php?act=addtk"><button class="btn btn-primary" type="button">Thêm tài khoản</button></a>
             <a href="../index.php"><button class="btn btn-primary" type="button">Trở về giao diện bán hàng</button></a>
         </div>
     </form>

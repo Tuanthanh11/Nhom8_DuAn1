@@ -20,7 +20,7 @@
                         $diachi=$_SESSION['user']['diachi'];
 
                     }else{
-                        header("location: http://localhost:81/duan1/index.php?act=dangnhap");
+                        header("location: index.php?act=dangnhap");
                     }
 
                     ?>

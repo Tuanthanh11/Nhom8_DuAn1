@@ -13,7 +13,8 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -24,12 +25,13 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="view/css/style.css" rel="stylesheet">
     <style>
-        .form_dk{
+        .form_dk {
             padding-left: 400px;
-            padding-right:400px;
+            padding-right: 400px;
         }
-        .thongbao{
-            color:red;
+
+        .thongbao {
+            color: red;
         }
     </style>
 </head>
@@ -70,7 +72,8 @@
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">VN</span>Peak sport</h1>
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span
+                            class="text-primary font-weight-bold border px-3 mr-1">VN</span>Peak sport</h1>
                 </a>
             </div>
             <div class="col-lg-6 col-6 text-left">
@@ -78,7 +81,7 @@
                     <div class="input-group">
                         <input type="text" name="kyw" class="form-control" placeholder="Tìm kiếm sản phẩm">
                         <div class="input-group-append">
-                            
+
                         </div>
                     </div>
                 </form>
@@ -102,33 +105,37 @@
     <div class="container-fluid mb-5">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
+                    data-toggle="collapse" href="#navbar-vertical"
+                    style="height: 65px; margin-top: -1px; padding: 0 30px;">
                     <h6 class="m-0">Thể loại</h6>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
-                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0"
+                    id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                        
-                    <?php
-                            foreach ($dsdm as $dm) {
-                                extract($dm);
-                                $linkdm="index.php?act=sanpham&iddm=".$id;
-                           
-                            echo '
-                                    <a href="'.$linkdm.'" class="nav-item nav-link">'.$tendm.'</a>
-                                ';
-                            }
-                            ?>
 
-                        
-                        
+                        <?php
+                        foreach ($dsdm as $dm) {
+                            extract($dm);
+                            $linkdm = "index.php?act=sanpham&iddm=" . $id;
+
+                            echo '
+                                    <a href="' . $linkdm . '" class="nav-item nav-link">' . $tendm . '</a>
+                                ';
+                        }
+                        ?>
+
+
+
                     </div>
                 </nav>
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
-                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                        <h1 class="m-0 display-5 font-weight-semi-bold"><span
+                                class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -139,55 +146,54 @@
                             <a href="index.php?act=sanpham" class="nav-item nav-link">Sản phẩm</a>
                             <a href="index.php?act=giohang" class="nav-item nav-link">Giỏ hàng</a>
                             <a href="index.php?act=bill" class="nav-item nav-link">Thông tin</a>
-                            
-                            
+                            <a href="index.php?act=lichsu" class="nav-item nav-link">Đơn hàng</a>
+
+
                         </div>
 
                         <?php
-                        if(isset($_SESSION['user'])){
+                        if (isset($_SESSION['user'])) {
                             extract($_SESSION['user']);
 
-                        ?>
+                            ?>
 
-                        <div class="navbar-nav ml-auto py-0">
-                            <?php if($role==1){ ?>
+                            <div class="navbar-nav ml-auto py-0">
+                                <?php if ($role == 1) { ?>
 
                                     <a href="admin/index.php" class="nav-item nav-link">Admin</a>
-                               
-                            <?php }?>
 
-                            <a href="index.php?act=lichsu" class="nav-item nav-link">Đơn hàng</a>
-                            <a href="index.php?act=edit_taikhoan" class="nav-item nav-link">Chỉnh sửa thông tin</a>
-                            
-                            <a href="index.php?act=dangnhap" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
-                            <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
+                                <?php } ?>
 
-                            <a href="index.php?act=edit_taikhoan" class="nav-item nav-link">Chỉnh sửa thông tin</a>
-                            
-                            <a href="index.php?act=dangnhap" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
-                            <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
-                        </div>
 
-                        <?php
-                        }else{
-                        ?>
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
-                            <a href="index.php?act=dangky" class="nav-item nav-link">Đăng ký</a>
-                        </div>
+
+
+                                <a href="index.php?act=edit_taikhoan" class="nav-item nav-link"> Xin chào: <?= $user ?></a>
+                                <a href="index.php?act=thoat" class="nav-item nav-link">Đăng xuất</a>
+                            </div>
+
+                            <?php
+                        } else {
+                            ?>
+                            <div class="navbar-nav ml-auto py-0">
+                                <a href="index.php?act=dangnhap" class="nav-item nav-link">Đăng nhập</a>
+                                <a href="index.php?act=dangky" class="nav-item nav-link">Đăng ký</a>
+                            </div>
                             <?php
                         }
-                            ?>
-                        
+                        ?>
+
                     </div>
                 </nav>
                 <div id="header-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="view/img/air-jordan-34-cny_desktop-banner_e910e41fc5404a57a6b21b3be123f72a.png" alt="Image">
+                            <img class="img-fluid"
+                                src="view/img/air-jordan-34-cny_desktop-banner_e910e41fc5404a57a6b21b3be123f72a.png"
+                                alt="Image">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">GIẢM 10% CHO ĐƠN HÀNG ĐẦU TIÊN CỦA BẠN</h4>
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">GIẢM 10% CHO ĐƠN HÀNG
+                                        ĐẦU TIÊN CỦA BẠN</h4>
                                     <h3 class="display-4 text-white font-weight-semi-bold mb-4">Nike Air Jordan 34</h3>
                                     <a href="" class="btn btn-light py-2 px-3">Mua ngay</a>
                                 </div>
@@ -197,8 +203,10 @@
                             <img class="img-fluid" src="view/img/Thiet-ke-chua-co-ten-63.png" alt="Image">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">GIẢM 10% CHO ĐƠN HÀNG ĐẦU TIÊN CỦA BẠN</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Nike Anti-Clog Traction</h3>
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">GIẢM 10% CHO ĐƠN HÀNG
+                                        ĐẦU TIÊN CỦA BẠN</h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Nike Anti-Clog Traction
+                                    </h3>
                                     <a href="" class="btn btn-light py-2 px-3">Mua ngay</a>
                                 </div>
                             </div>

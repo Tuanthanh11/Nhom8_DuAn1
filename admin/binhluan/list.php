@@ -39,7 +39,8 @@
                    </table>
                 </div>
                 
-                <div class="row frmcontent">
+                <div>
+                    <a href="index.php"><button class="btn btn-primary" type="button">Admin</button></a>
                     <a href="../index.php"><button class="btn btn-primary" type="button">Trang chủ</button></a>
                 </div>
             </form>
